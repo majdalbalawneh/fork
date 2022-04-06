@@ -1,84 +1,77 @@
-// mona Salih — Today at 12:33 PM
-// 2.Write a JavaScript function that accepts a string as a parameter and 
-// converts the first letter of each word of the string in upper case.
-// Example string : 'the car drove fast'
-// Expected Output : 'The Car Drove Fast';
 
+console.log("round1");
 
-function uppercase(string)
-{
-    let array1 = string.split(' ');
- let newarray1 = [];
+// river First Round
+// 1. Write a JavaScript function that return reverse a array. 
+// Example x = 834848;
+// Expected Output : 848438
+console.log("task1");
+// let arra=[];
+// function reverse(num){
+//     for (let i= num.length-1;i>=0,i--){
 
-    
-  for(let x = 0; x < array1.length; x++){
-      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
-  }
-  return newarray1.join(' ');
-}
-console.log(uppercase("the car drove fast"));
-document.getElementById("task4").innerHTML;
+//     }
+// }
 
-/////////////////////////////////////////////
-function palindrome(x){
-    let arry= x.split('');
-let l=arry.length;
-for(let i=0; i<=l/2; i++){
-    if (arry[i] == arry[l-1 -i]){
-        continue;
-   
-    }
-    else{
-        return false;
-    }
+console.log("task2");
+const str = 'The Car Drove Fast';
+const arr = str.split(" ");
+for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1,4);
 
 }
-return true;
-}
+const str2 = arr.join(" ");
+console.log(str2);
+// ////////////////////////////
 
-document.getElementById('task3').innerHTML= JSON.stringify(palindrome('ABCDCBA'));
+console.log("round2");
+console.log("task3");
+// 1. Write a JavaScript function that return true if the passed string palindrome false if 
+// not 
+// Example string:ABCDCBA
+// Expected Output :True
 
-//////////////////////////////////////////////
 
-function decending(x){
-    let l= x.length;
-    let array= [];
-    let max= x[0];
-    let index= 0;
-    for(let j=0; j<l; j++){
-    for(let i=0; i<l; i++){
-        if(x[i] >= max){
-            max= x[i];
-            index= i;
+
+
+function checkPalindrome(string) {
+    const len = string.length;
+    for (let i = 0; i < len / 2; i++) {
+        if (string[i] !== string[len - 1 - i]) {
+            return 'false';
         }
     }
-    array.push(max);
-    x.splice(index,1)
-    max= x[0];
-}
-return array;
+    return 'true';
 }
 
-document.getElementById('task2').innerHTML= JSON.stringify(decending([2,9,0,4]));
-
-/////////////////////////////////////////////////////////
-
-function Reverse(arr){
-    let l=arr.length;
-    let newArr=[];
-    let e= l-1;
-    for(let i=0; i<l; i++){
-       newArr[i]= arr[j];
-       e--;
-       if (e<0){
-           break;    
-        }
-}
-    return newArr;
-}
+const string = "ABCDCBA";
+const value = checkPalindrome(string);
+console.log(value);
 
 
-document.getElementById('task1').innerHTML= JSON.stringify(Reverse([8, 3, 4, 8, 4, 8]));
+///////////////////////////////////////////
+
+// 2.Write a JavaScript function that return the sort array decending
+
+// Example x = 2904;
+// Expected Output : 9420
+
+console.log("task4");
+
+const points = [2,9,0,4];
+points.sort(function(a, b){return b-a});
+console.log(points); 
+
+////////////////////////////////////////////
+// console.log("task4,2");
+
+// const array = str.split(" ");
+// for (var i = 0; i < arr.length; i++) {
+//     arr[i] = arr[i].charAt(0).sort() + arr[i].slice(1,4);
+
+// }
+// const stray2 = arr.join(" ");
+// console.log(str2);
 
 
 
